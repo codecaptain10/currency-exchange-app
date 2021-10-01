@@ -73,5 +73,24 @@ section h1 {
 }
 
 section p {
-    font-size: 1.5 rem;
+    font-size: 1.5rem;
+}
+
+
+/*Sections Imag*/
+
+section#home {
+    background: url('../img/homepage.jpg') no-repeat center center/cover;
+}
+
+section#exchange-calculator {
+    background: url('../img/currency-calculator.jpg') no-repeat center center/cover;
+}
+
+section#currency-charts {
+    background: url('../img/currency-charts.jpg') no-repeat center center/cover;
+}
+
+section#contact {
+    background: url('../img/contact.jpg') no-repeat center center/cover;
 }
