@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currency Exchange</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/exchange-calculator.css">
 </head>
 
 <body>
@@ -35,6 +36,35 @@
         <section id="exchange-calculator">
             <h1>Currency Exchange Calculator</h1>
             <p></p>
+            <div class="exchange">
+                <div class="changeFrom">
+                    <h2>FROM</h2>
+                    <input class="howMuchFrom" type="text" value="0">
+                    <select name="currency-list" class="currency-list">
+                        <option value="euro">Eüro</option>
+                        <option value="zloty">Złoty</option>
+                        <option value="dollar">Dollar</option>
+                        <option value="pfund">Pfund</option>
+                    </select>
+                </div>
+                <div class="changeTo">
+                    <h2>TO</h2>
+                    <input class="howMuchTo" value="0">
+                    <select name="currency-list" class="currency-list">
+                        <option value="euro">Eüro</option>
+                        <option value="zloty" selected="selected">Złoty</option>
+                        <option value="dollar">Dollar</option>
+                        <option value="pfund">Pfund</option>
+                    </select>
+                </div>
+                <div class="course">
+                    <span> 1 </span>
+                    <span id="currencyFrom"> Euro </span>
+                    <span>  =  </span>
+                    <span id="currency-course"> 4.15 </span>
+                    <span id="currencyTo">Złoty</span>
+                </div>
+            </div>
         </section>
         <section id="currency-charts">
             <h1>Currency charts</h1>
