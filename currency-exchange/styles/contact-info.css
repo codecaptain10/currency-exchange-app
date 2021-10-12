@@ -26,15 +26,6 @@
     font-size: 240px;
 }
 
-span {
-    display: block;
-    position: relative;
-    top: 30%;
-    right: 10%;
-    font-size: 40px;
-    color: white;
-}
-
 .contact-data {
     background-color: cadetblue;
     position: relative;
@@ -42,4 +33,13 @@ span {
     left: 50%;
     width: 50%;
     height: 100%;
+}
+
+.contact-data span {
+    display: block;
+    position: relative;
+    top: 30%;
+    right: 10%;
+    font-size: 40px;
+    color: white;
 }
