@@ -1,0 +1,1 @@
+/*Moduł na funkcje do przeliczania walut */
