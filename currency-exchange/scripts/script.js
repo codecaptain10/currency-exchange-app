@@ -21,10 +21,18 @@
         - updateValue (końcowa funkcja do eventu)
     - Create a event (nasłuchiwanie zmian)
 6. Podsumowanie exchange.js
+    - Import: Klasa Currency
     - Obiekty: Euro, Złoty, Dollar, Pfund z kursami walut dla innych
     - Zmienne: valueInput (ile), valueOutput(wymiana), currencyFrom(z jakiej waluty), currecyTo(na jaka walute), acutalCourse (aktualny kurs)
     - Funkcje:exchange() (przypisanie wartosci wymiany), giveExchangeResultat()(ustawienienie jakie waluty są wybrane, ustawienie kursu, użycie exchange() do przypisania wymiany) 
     - Eventy: valueInput, currencyFrom, currencyTo z eventami z wywoałniem funkcji giveExchangeResultat aby dynamicznie zmienić wynik wymiany walut w zależości od zmiany wartości
+
+7. Moduł actualCourseBanner
+    - Import: Exchange (właściwości i funkcje)
+    - Obiekty: 
+    - Zmienne: 
+    - Funkcje: 
+    - Eventy: 
 
 */
 
@@ -34,28 +42,17 @@
 
 /*Testing Version to functionality */
 
-const valueInput = document.querySelector('.howMuchFrom');
-const valueOutput = document.querySelector('.howMuchTo');
+//Import
+import * as Exchange from '../modules/exchange.js'
+import * as ActualCourseBanner from '../modules/actualCourseBanner.js'
 
-function updateValue() {
-    valueOutput.value = valueInput.value;
-}
-
-const euro = {
-    name: "Euro",
-    course: {
-        changeTo: {
-            euro: 1,
-            zloty: 4.15,
-            dollar: 2.5,
-            pfudn: 3.3
-        }
-    }
-}
-
-valueInput.addEventListener('input', function() {
-    console.log(valueInput.value);
-    let course = euro.course.changeTo.zloty;
-    valueOutput.value = parseInt(valueInput.value) * course;
-
+//Events
+Exchange.valueInput.addEventListener('input', Exchange.giveExchangeResult);
+Exchange.currencyFrom.addEventListener('change', function() {
+    Exchange.giveExchangeResult();
+    ActualCourseBanner.changeBannerWithActualCourse(Exchange.currencyFrom.value, Exchange.actualCourse, Exchange.currencyTo.value);
+});
+Exchange.currencyTo.addEventListener('change', function() {
+    Exchange.giveExchangeResult();
+    ActualCourseBanner.changeBannerWithActualCourse(Exchange.currencyFrom.value, Exchange.actualCourse, Exchange.currencyTo.value);
 });

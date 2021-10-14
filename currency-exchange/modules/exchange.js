@@ -3,6 +3,7 @@ import {
     Currency
 } from './currencyClass.js';
 
+
 /* ----- Currency objects ----- */
 //EURO: Euro:1, Złoty: 4.58, Dollar: 1.16, Pfund:0.85
 export let Euro = new Currency(1, 4.58, 1.16, 0.85);
@@ -20,19 +21,19 @@ export let Pfund = new Currency(1, 5.39, 1.37, 1);
 /* ----- Values ----- */
 
 //Input and Output
-const valueInput = document.querySelector('.howMuchFrom');
-const valueOutput = document.querySelector('.howMuchTo');
+export const valueInput = document.querySelector('.howMuchFrom');
+export const valueOutput = document.querySelector('.howMuchTo');
 //actual Course
-let actualCourse;
+export let actualCourse;
 //CurrencyFrom and CurrencyTo
-const currencyFrom = document.querySelector('#currencyFrom');
-const currencyTo = document.querySelector('#currencyTo');
+export const currencyFrom = document.querySelector('#currencyFrom');
+export const currencyTo = document.querySelector('#currencyTo');
 
 
 /* ----- Functions ----- */
 
 //Function to exchange resultat
-function exchange() {
+export function exchange() {
 
     valueOutput.value = parseInt(valueInput.value) * actualCourse;
 
@@ -42,7 +43,7 @@ function exchange() {
 }
 
 //Function changeCourse
-function giveExchangeResult() {
+export function giveExchangeResult() {
     if (currencyFrom.value === "euro") {
         if (currencyTo.value === "euro") {
             actualCourse = Euro.courseToEuro;
@@ -90,12 +91,13 @@ function giveExchangeResult() {
 
 
 /*----- Events ----- */
+//To powinno być w głównym skrypcie
 
 //Event to change the Output depend from Input
-valueInput.addEventListener('input', giveExchangeResult);
+//valueInput.addEventListener('input', giveExchangeResult);
 
 //Event to choice the firtst currency
-currencyFrom.addEventListener('change', giveExchangeResult);
+//currencyFrom.addEventListener('change', giveExchangeResult);
 
 //Event to choice the second currency
-currencyTo.addEventListener('change', giveExchangeResult);
+//currencyTo.addEventListener('change', giveExchangeResult);
