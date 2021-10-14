@@ -1,9 +1,9 @@
 /*Moduł na funkcje do przeliczania walut */
 import {
     Currency
-} from './currency.js';
+} from './currencyClass.js';
 
-//Currency objects
+/* ----- Currency objects ----- */
 //EURO: Euro:1, Złoty: 4.58, Dollar: 1.16, Pfund:0.85
 export let Euro = new Currency(1, 4.58, 1.16, 0.85);
 
@@ -23,20 +23,26 @@ export let Pfund = new Currency(1, 5.39, 1.37, 1);
 const valueInput = document.querySelector('.howMuchFrom');
 const valueOutput = document.querySelector('.howMuchTo');
 //actual Course
-let actualCourse = Euro.courseToZloty;
+let actualCourse;
 //CurrencyFrom and CurrencyTo
 const currencyFrom = document.querySelector('#currencyFrom');
 const currencyTo = document.querySelector('#currencyTo');
-//Elements from Banner
-const currencyFromBanner = document.querySelector('#currencyFromBanner');
-const currencyCourseBanner = document.querySelector('#currencyCourseBanner');
-const currencyToBanner = document.querySelector('#currencyToBanner');
 
 
 /* ----- Functions ----- */
 
+//Function to exchange resultat
+function exchange() {
+
+    valueOutput.value = parseInt(valueInput.value) * actualCourse;
+
+    if (valueInput.value === "") {
+        valueOutput.value = "0";
+    }
+}
+
 //Function changeCourse
-function giveResult() {
+function giveExchangeResult() {
     if (currencyFrom.value === "euro") {
         if (currencyTo.value === "euro") {
             actualCourse = Euro.courseToEuro;
@@ -79,38 +85,17 @@ function giveResult() {
         }
     }
 
-    valueOutput.value = parseInt(valueInput.value) * actualCourse;
+    exchange();
 }
 
-//Function to change Banner with actual Course
-function changeBannerWithActualCourse(firstCurrency, Course, secondCurrency) {
-
-
-}
-
-//Function to exchange resultat
-
-
-//Function Update Value
-function updateValue() {
-    console.log(valueInput.value);
-    giveResult();
-}
 
 /*----- Events ----- */
 
 //Event to change the Output depend from Input
-valueInput.addEventListener('input', updateValue);
+valueInput.addEventListener('input', giveExchangeResult);
 
 //Event to choice the firtst currency
-currencyFrom.addEventListener('change', function() {
-    console.log("Zmiana kursu FROM!");
-    giveResult();
-})
+currencyFrom.addEventListener('change', giveExchangeResult);
 
 //Event to choice the second currency
-currencyTo.addEventListener('change', function() {
-    console.log("Zmiana kursu TO!");
-    giveResult();
-
-});
+currencyTo.addEventListener('change', giveExchangeResult);

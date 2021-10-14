@@ -20,6 +20,11 @@
         - changeBanner (zmiana danych w banerze)
         - updateValue (końcowa funkcja do eventu)
     - Create a event (nasłuchiwanie zmian)
+6. Podsumowanie exchange.js
+    - Obiekty: Euro, Złoty, Dollar, Pfund z kursami walut dla innych
+    - Zmienne: valueInput (ile), valueOutput(wymiana), currencyFrom(z jakiej waluty), currecyTo(na jaka walute), acutalCourse (aktualny kurs)
+    - Funkcje:exchange() (przypisanie wartosci wymiany), giveExchangeResultat()(ustawienienie jakie waluty są wybrane, ustawienie kursu, użycie exchange() do przypisania wymiany) 
+    - Eventy: valueInput, currencyFrom, currencyTo z eventami z wywoałniem funkcji giveExchangeResultat aby dynamicznie zmienić wynik wymiany walut w zależości od zmiany wartości
 
 */
 
