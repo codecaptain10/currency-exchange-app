@@ -45,7 +45,7 @@
                 <div class="changeFrom">
                     <h2>FROM</h2>
                     <input class="howMuchFrom" type="text" value="0">
-                    <select name="currency-list" class="currency-list">
+                    <select id="currencyFrom" name="currency-list" class="currency-list">
                         <option value="euro">Eüro</option>
                         <option value="zloty">Złoty</option>
                         <option value="dollar">Dollar</option>
@@ -55,7 +55,7 @@
                 <div class="changeTo">
                     <h2>TO</h2>
                     <input class="howMuchTo" value="0">
-                    <select name="currency-list" class="currency-list">
+                    <select id="currencyTo" name="currency-list" class="currency-list">
                         <option value="euro">Eüro</option>
                         <option value="zloty" selected="selected">Złoty</option>
                         <option value="dollar">Dollar</option>
@@ -64,10 +64,10 @@
                 </div>
                 <div class="course">
                     <span> 1 </span>
-                    <span id="currencyFrom"> Euro </span>
+                    <span id="currencyFromBanner"> Euro </span>
                     <span>  =  </span>
-                    <span id="currency-course"> 4.15 </span>
-                    <span id="currencyTo">Złoty</span>
+                    <span id="currencyCourseBanner"> 4.15 </span>
+                    <span id="currencyToBanner">Złoty</span>
                 </div>
             </div>
         </section>
@@ -92,7 +92,7 @@
         </section>
     </div>
 </body>
-<script src="scripts/script.js"></script>
+<script src="modules/exchange.js" type="module"></script>
 
 
 </html>

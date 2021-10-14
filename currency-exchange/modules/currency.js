@@ -1,6 +1,6 @@
 /*Moduł do klasy Currency i obiektów każdej waluty */
 
-class Currency {
+export class Currency {
     //Currency Types
     courseToEuro;
     courseToZloty;
@@ -52,14 +52,14 @@ class Currency {
 
 }
 
-//EURO: Euro:1, Złoty: 4.58, Dollar: 1.16, Pfund:0.85
-let Euro = new Currency(1, 4.58, 1.16, 0.85);
+// //EURO: Euro:1, Złoty: 4.58, Dollar: 1.16, Pfund:0.85
+// export let Euro = new Currency(1, 4.58, 1.16, 0.85);
 
-//ZŁOTY: Euro:0.22, Złoty: 1, Dollar: 0.25, Pfund:0.19
-let Zloty = new Currency(0.22, 1, 0.25, 0.19);
+// //ZŁOTY: Euro:0.22, Złoty: 1, Dollar: 0.25, Pfund:0.19
+// export let Zloty = new Currency(0.22, 1, 0.25, 0.19);
 
-//DOLLAR: Euro:0.86, Złoty: 3.94, Dollar: 1, Pfund:0.73
-let Dollar = new Currency(0.86, 3.94, 1, 0.73);
+// //DOLLAR: Euro:0.86, Złoty: 3.94, Dollar: 1, Pfund:0.73
+// export let Dollar = new Currency(0.86, 3.94, 1, 0.73);
 
-//PFUND: Euro:1.18, Złoty: 5.39, Dollar: 1.37, Pfund:1
-let Pfund = new Currency(1, 5.39, 1.37, 1);
+// //PFUND: Euro:1.18, Złoty: 5.39, Dollar: 1.37, Pfund:1
+// export let Pfund = new Currency(1, 5.39, 1.37, 1);
