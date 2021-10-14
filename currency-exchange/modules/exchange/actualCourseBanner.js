@@ -1,18 +1,15 @@
-/*Actual course in banner */
-
+/*Module to update actual course in banner */
 
 //Elements from Banner
 export const currencyFromBanner = document.querySelector('#currencyFromBanner');
 export const currencyCourseBanner = document.querySelector('#currencyCourseBanner');
 export const currencyToBanner = document.querySelector('#currencyToBanner');
-// const actualFromCurrency = Exchange.currencyFrom;
-// const actualToCurrency = Exchange.currencyTo;
-// const actualCurrencyCourse = Exchange.actualCourse;
 
 
 /*----- Functions ------ */
-//Function to change Banner with actual Course
-export function changeBannerWithActualCourse(currencyFrom, actualCourse, currencyTo) {
+//Function to update banner with actual course
+export function updateBannerWithActualCourse(currencyFrom, actualCourse, currencyTo) {
+    //Update first currency
     if (currencyFrom === "euro") {
         currencyFromBanner.textContent = " Eüro "
     } else if (currencyFrom === "zloty") {
@@ -23,12 +20,10 @@ export function changeBannerWithActualCourse(currencyFrom, actualCourse, currenc
         currencyFromBanner.textContent = " Pfund "
     }
 
-    //currencyFromBanner.textContent = currencyFrom;
-
+    //Update course
     currencyCourseBanner.textContent = " " + actualCourse + " ";
 
-
-    //currencyToBanner.textContent = currencyTo
+    //Update second currency
     if (currencyTo === "euro") {
         currencyToBanner.textContent = " Eüro "
     } else if (currencyTo === "zloty") {

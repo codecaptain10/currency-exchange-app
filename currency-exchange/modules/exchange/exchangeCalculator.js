@@ -1,4 +1,6 @@
-/*Moduł na funkcje do przeliczania walut */
+/*Module to currency exchange calculator*/
+
+//Import Class Currency
 import {
     Currency
 } from './currencyClass.js';
@@ -20,19 +22,19 @@ export let Pfund = new Currency(1, 5.39, 1.37, 1);
 
 /* ----- Values ----- */
 
-//Input and Output
+//input value and output value
 export const valueInput = document.querySelector('.howMuchFrom');
 export const valueOutput = document.querySelector('.howMuchTo');
-//actual Course
+//actual course
 export let actualCourse;
-//CurrencyFrom and CurrencyTo
+//firtst currency and second currency
 export const currencyFrom = document.querySelector('#currencyFrom');
 export const currencyTo = document.querySelector('#currencyTo');
 
 
 /* ----- Functions ----- */
 
-//Function to exchange resultat
+//Function to update exchange resultat
 export function exchange() {
 
     valueOutput.value = parseInt(valueInput.value) * actualCourse;
@@ -42,7 +44,7 @@ export function exchange() {
     }
 }
 
-//Function changeCourse
+//Function to give exchange result
 export function giveExchangeResult() {
     if (currencyFrom.value === "euro") {
         if (currencyTo.value === "euro") {
@@ -88,16 +90,3 @@ export function giveExchangeResult() {
 
     exchange();
 }
-
-
-/*----- Events ----- */
-//To powinno być w głównym skrypcie
-
-//Event to change the Output depend from Input
-//valueInput.addEventListener('input', giveExchangeResult);
-
-//Event to choice the firtst currency
-//currencyFrom.addEventListener('change', giveExchangeResult);
-
-//Event to choice the second currency
-//currencyTo.addEventListener('change', giveExchangeResult);

@@ -43,16 +43,16 @@
 /*Testing Version to functionality */
 
 //Import
-import * as Exchange from '../modules/exchange.js'
-import * as ActualCourseBanner from '../modules/actualCourseBanner.js'
+import * as ExchangeCalculator from '../modules/exchange/exchangeCalculator.js'
+import * as ActualCourseBanner from '../modules/exchange/actualCourseBanner.js'
 
 //Events
-Exchange.valueInput.addEventListener('input', Exchange.giveExchangeResult);
-Exchange.currencyFrom.addEventListener('change', function() {
-    Exchange.giveExchangeResult();
-    ActualCourseBanner.changeBannerWithActualCourse(Exchange.currencyFrom.value, Exchange.actualCourse, Exchange.currencyTo.value);
+ExchangeCalculator.valueInput.addEventListener('input', ExchangeCalculator.giveExchangeResult);
+ExchangeCalculator.currencyFrom.addEventListener('change', function() {
+    ExchangeCalculator.giveExchangeResult();
+    ActualCourseBanner.updateBannerWithActualCourse(ExchangeCalculator.currencyFrom.value, ExchangeCalculator.actualCourse, ExchangeCalculator.currencyTo.value);
 });
-Exchange.currencyTo.addEventListener('change', function() {
-    Exchange.giveExchangeResult();
-    ActualCourseBanner.changeBannerWithActualCourse(Exchange.currencyFrom.value, Exchange.actualCourse, Exchange.currencyTo.value);
+ExchangeCalculator.currencyTo.addEventListener('change', function() {
+    ExchangeCalculator.giveExchangeResult();
+    ActualCourseBanner.updateBannerWithActualCourse(ExchangeCalculator.currencyFrom.value, ExchangeCalculator.actualCourse, ExchangeCalculator.currencyTo.value);
 });

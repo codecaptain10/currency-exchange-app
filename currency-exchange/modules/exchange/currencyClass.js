@@ -1,4 +1,4 @@
-/*Currency Class to creation currency objects */
+/*Module with Currency Class to create currency objects*/
 
 export class Currency {
     //Currency Types
