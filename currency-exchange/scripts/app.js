@@ -34,6 +34,26 @@
     - Funkcje: 
     - Eventy: 
 
+8. Funkcjonalość chart.js 
+Zródła: chart.js, codepen, dokumentacja
+
+NPM:
+1) Instalacja pakietu w katalogu "lib" przez NPM dodanie <script> z linkiem z CDN
+HTML
+2) Utworzenie kontenera na chart.js: Kontener, <canvas> i 4 <buttons>
+CSS
+3) Nadanie stylów w currency-charts.js 
+JS Modules
+4) Stworzenie 3 moodułów: chartsChoice.js, chartsData.js, chartsView.js
+5) Edytowanie modułów, utworzenie funkcji do przycisków w chartChoice
+6) Inicjalizacja obiektu biblioteki myChart w chartsView
+7) Utowrzenie danych w chartData
+8) Funckje w chartsView
+JS Scripts
+9) Uporządkowanie kodu i import do skyptu app.js
+10) Przypisanie eventów
+11) Uruchomienie i testowy użytek
+
 */
 //Import
 import * as ExchangeCalculator from '../modules/exchange/exchangeCalculator.js'
