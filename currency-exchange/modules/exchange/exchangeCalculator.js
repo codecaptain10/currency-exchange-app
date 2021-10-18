@@ -66,6 +66,7 @@ export function giveExchangeResult() {
         } else if (currencyTo.value === "pfund") {
             actualCourse = Zloty.courseToPfund;
         }
+
     } else if (currencyFrom.value === "dollar") {
         if (currencyTo.value === "euro") {
             actualCourse = Dollar.courseToEuro;

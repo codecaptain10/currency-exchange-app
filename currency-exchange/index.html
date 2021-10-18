@@ -66,14 +66,22 @@
                     <span> 1 </span>
                     <span id="currencyFromBanner"> Euro </span>
                     <span>  =  </span>
-                    <span id="currencyCourseBanner"> 4.15 </span>
+                    <span id="currencyCourseBanner"> 4.58 </span>
                     <span id="currencyToBanner">Złoty</span>
                 </div>
             </div>
         </section>
         <section id="currency-charts">
             <h1>Currency charts</h1>
-            <div class="charts-container"></div>
+            <div class="charts-container">
+                <div class="charts">
+                    <canvas id="myChart" width="100" height="100"></canvas>
+                    <button id="euroButton" class="checkedButton"> Euro </button>
+                    <button id="zlotyButton"> Złoty</button>
+                    <button id="dollarButton"> Dollar </button>
+                    <button id="pfundButton"> Pfund</button>
+                </div>
+            </div>
             <p></p>
         </section>
         <section id="contact">
@@ -92,7 +100,9 @@
         </section>
     </div>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="scripts/app.js" type="module"></script>
+
 
 
 </html>

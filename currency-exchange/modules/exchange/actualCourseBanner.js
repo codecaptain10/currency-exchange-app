@@ -7,6 +7,7 @@ export const currencyToBanner = document.querySelector('#currencyToBanner');
 
 
 /*----- Functions ------ */
+
 //Function to update banner with actual course
 export function updateBannerWithActualCourse(currencyFrom, actualCourse, currencyTo) {
     //Update first currency
