@@ -1,11 +1,3 @@
-//colors:
-// export let euroColor = "blue";
-// export let zlotyColor = "red";
-// export let dollarColor = "green";
-// export let pfundColor = "darkorange";
-
-
-
 //Euro: Zloty, Dollar, Pfund 
 export let chartsForEuro = {
     dataset1: {

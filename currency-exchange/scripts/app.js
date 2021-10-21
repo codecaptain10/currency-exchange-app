@@ -55,7 +55,7 @@ JS Scripts
 11) Uruchomienie i testowy użytek
 
 */
-//Import
+//Import - exchange
 import * as ExchangeCalculator from '../modules/exchange/exchangeCalculator.js'
 import * as ActualCourseBanner from '../modules/exchange/actualCourseBanner.js'
 
@@ -65,7 +65,7 @@ import * as chartsView from "../modules/charts/chartsView.js";
 import * as chartsChoice from "../modules/charts/chartsChoice.js"
 
 
-//Events
+//Events - exchange
 ExchangeCalculator.valueInput.addEventListener('input', ExchangeCalculator.giveExchangeResult);
 ExchangeCalculator.currencyFrom.addEventListener('change', function() {
     ExchangeCalculator.giveExchangeResult();

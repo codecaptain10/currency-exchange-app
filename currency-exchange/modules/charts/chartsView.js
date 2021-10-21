@@ -1,24 +1,6 @@
 import * as chartsData from "./chartsData.js";
 
 //Charts
-//Variables
-//dataset 1
-// export let labelChart1 = chartsData.chartsForEuro.dataset1.labelChart1;
-// export let dataChart1 = chartsData.chartsForEuro.dataset1.dataChart1;
-// export let backgroundColorChart1 = chartsData.chartsForEuro.dataset1.backgroundColorChart1;
-// export let borderColorChart1 = chartsData.chartsForEuro.dataset1.borderColorChart1;
-//dataset2
-// export let labelChart2 = chartsData.chartsForEuro.dataset2.labelChart2;
-// export let dataChart2 = chartsData.chartsForEuro.dataset2.dataChart2;
-// export let backgroundColorChart2 = chartsData.chartsForEuro.dataset2.backgroundColorChart2;
-// export let borderColorChart2 = chartsData.chartsForEuro.dataset2.borderColorChart2;
-// //dataset3
-// export let labelChart3 = chartsData.chartsForEuro.dataset3.labelChart3;
-// export let dataChart3 = chartsData.chartsForEuro.dataset3.dataChart3;
-// export let backgroundColorChart3 = chartsData.chartsForEuro.dataset3.backgroundColorChart3;
-// export let borderColorChart3 = chartsData.chartsForEuro.dataset3.borderColorChart3;
-
-
 
 //chart.js setup
 let ctx = document.getElementById("myChart").getContext('2d');
