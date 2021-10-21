@@ -6,7 +6,6 @@ export const euroButton = document.querySelector("#euroButton");
 export const zlotyButton = document.querySelector("#zlotyButton");
 export const dollarButton = document.querySelector("#dollarButton");
 export const pfundButton = document.querySelector("#pfundButton");
-
 export const buttons = [euroButton, zlotyButton, dollarButton, pfundButton];
 
 
@@ -22,7 +21,6 @@ export function removeClassFromButton() {
 export function addClassToButton(chosenCurrency) {
     if (chosenCurrency === "euro") {
         euroButton.classList.add('checkedButton');
-
     } else if (chosenCurrency === "zloty") {
         zlotyButton.classList.add('checkedButton');
     } else if (chosenCurrency === "dollar") {

@@ -3,20 +3,20 @@ import * as chartsData from "./chartsData.js";
 //Charts
 //Variables
 //dataset 1
-export let labelChart1 = chartsData.chartsForEuro.dataset1.labelChart1;
-export let dataChart1 = chartsData.chartsForEuro.dataset1.dataChart1;
-export let backgroundColorChart1 = chartsData.chartsForEuro.dataset1.backgroundColorChart1;
-export let borderColorChart1 = chartsData.chartsForEuro.dataset1.borderColorChart1;
+// export let labelChart1 = chartsData.chartsForEuro.dataset1.labelChart1;
+// export let dataChart1 = chartsData.chartsForEuro.dataset1.dataChart1;
+// export let backgroundColorChart1 = chartsData.chartsForEuro.dataset1.backgroundColorChart1;
+// export let borderColorChart1 = chartsData.chartsForEuro.dataset1.borderColorChart1;
 //dataset2
-export let labelChart2 = chartsData.chartsForEuro.dataset2.labelChart2;
-export let dataChart2 = chartsData.chartsForEuro.dataset2.dataChart2;
-export let backgroundColorChart2 = chartsData.chartsForEuro.dataset2.backgroundColorChart2;
-export let borderColorChart2 = chartsData.chartsForEuro.dataset2.borderColorChart2;
-//dataset3
-export let labelChart3 = chartsData.chartsForEuro.dataset3.labelChart3;
-export let dataChart3 = chartsData.chartsForEuro.dataset3.dataChart3;
-export let backgroundColorChart3 = chartsData.chartsForEuro.dataset3.backgroundColorChart3;
-export let borderColorChart3 = chartsData.chartsForEuro.dataset3.borderColorChart3;
+// export let labelChart2 = chartsData.chartsForEuro.dataset2.labelChart2;
+// export let dataChart2 = chartsData.chartsForEuro.dataset2.dataChart2;
+// export let backgroundColorChart2 = chartsData.chartsForEuro.dataset2.backgroundColorChart2;
+// export let borderColorChart2 = chartsData.chartsForEuro.dataset2.borderColorChart2;
+// //dataset3
+// export let labelChart3 = chartsData.chartsForEuro.dataset3.labelChart3;
+// export let dataChart3 = chartsData.chartsForEuro.dataset3.dataChart3;
+// export let backgroundColorChart3 = chartsData.chartsForEuro.dataset3.backgroundColorChart3;
+// export let borderColorChart3 = chartsData.chartsForEuro.dataset3.borderColorChart3;
 
 
 
@@ -27,26 +27,26 @@ let myChart = new Chart(ctx, {
     data: {
         labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
         datasets: [{
-                label: labelChart1, // Name the series
-                data: dataChart1, // Specify the data values array
+                label: chartsData.chartsForEuro.dataset1.labelChart1, // Name the series
+                data: chartsData.chartsForEuro.dataset1.dataChart1, // Specify the data values array
                 fill: false,
-                borderColor: borderColorChart1, // Add custom color border (Line)
-                backgroundColor: backgroundColorChart1, // Add custom color background (Points and Fill)
-                borderWidth: 1 // Specify bar border width
+                borderColor: chartsData.chartsForEuro.dataset1.borderColorChart1, // Add custom color border (Line)
+                backgroundColor: chartsData.chartsForEuro.dataset1.backgroundColorChart1, // Add custom color background (Points and Fill)
+                borderWidth: 2 // Specify bar border width
             },
             {
-                label: labelChart2, // Name the series
-                data: dataChart2, // Specify the data values array
+                label: chartsData.chartsForEuro.dataset2.labelChart2, // Name the series
+                data: chartsData.chartsForEuro.dataset2.dataChart2, // Specify the data values array
                 fill: false,
-                borderColor: borderColorChart2, // Add custom color border (Line)
-                backgroundColor: backgroundColorChart2, // Add custom color background (Points and Fill)
+                borderColor: chartsData.chartsForEuro.dataset2.borderColorChart2, // Add custom color border (Line)
+                backgroundColor: chartsData.chartsForEuro.dataset2.backgroundColorChart2, // Add custom color background (Points and Fill)
                 borderWidth: 1 // Specify bar border width
             }, {
-                label: labelChart3, // Name the series
-                data: dataChart3, // Specify the data values array
+                label: chartsData.chartsForEuro.dataset3.labelChart3, // Name the series
+                data: chartsData.chartsForEuro.dataset3.dataChart3, // Specify the data values array
                 fill: false,
-                borderColor: borderColorChart3, // Add custom color border (Line)
-                backgroundColor: borderColorChart3, // Add custom color background (Points and Fill)
+                borderColor: chartsData.chartsForEuro.dataset3.borderColorChart3, // Add custom color border (Line)
+                backgroundColor: chartsData.chartsForEuro.dataset3.backgroundColorChart3, // Add custom color background (Points and Fill)
                 borderWidth: 1 // Specify bar border width
             }
         ]

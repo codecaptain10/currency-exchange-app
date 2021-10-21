@@ -38,11 +38,11 @@
 Zródła: chart.js, codepen, dokumentacja
 
 NPM:
-1) Instalacja pakietu w katalogu "lib" przez NPM dodanie <script> z linkiem z CDN
+*1) Instalacja pakietu w katalogu "lib" przez NPM dodanie <script> z linkiem z CDN
 HTML
-2) Utworzenie kontenera na chart.js: Kontener, <canvas> i 4 <buttons>
+*2) Utworzenie kontenera na chart.js: Kontener, <canvas> i 4 <buttons>
 CSS
-3) Nadanie stylów w currency-charts.js 
+*3) Nadanie stylów w currency-charts.js 
 JS Modules
 4) Stworzenie 3 moodułów: chartsChoice.js, chartsData.js, chartsView.js
 5) Edytowanie modułów, utworzenie funkcji do przycisków w chartChoice
