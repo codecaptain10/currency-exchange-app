@@ -60,8 +60,7 @@ import * as ExchangeCalculator from '../modules/exchange/exchangeCalculator.js'
 import * as ActualCourseBanner from '../modules/exchange/actualCourseBanner.js'
 
 //Import - charts
-import * as chartsData from "../modules/charts/chartsData.js";
-import * as chartsView from "../modules/charts/chartsView.js";
+import * as chartsView from "../modules/charts/chartsView.js"
 import * as chartsChoice from "../modules/charts/chartsChoice.js"
 
 
@@ -77,7 +76,6 @@ ExchangeCalculator.currencyTo.addEventListener('change', function() {
 });
 
 //Events - charts
-
 chartsChoice.euroButton.addEventListener('click', function() {
     console.log("Chosen Euro!");
     chartsChoice.clickedButton("euro");

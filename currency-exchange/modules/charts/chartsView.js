@@ -3,41 +3,44 @@ import * as chartsData from "./chartsData.js";
 //Charts
 
 //chart.js setup
-let ctx = document.getElementById("myChart").getContext('2d');
-let myChart = new Chart(ctx, {
+let canvasElement = document.getElementById("myChart").getContext('2d');
+let config = {
     type: 'line',
     data: {
         labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
         datasets: [{
-                label: chartsData.chartsForEuro.dataset1.labelChart1, // Name the series
-                data: chartsData.chartsForEuro.dataset1.dataChart1, // Specify the data values array
+                label: chartsData.chartsForEuro.dataset1.labelChart1,
+                data: chartsData.chartsForEuro.dataset1.dataChart1,
                 fill: false,
-                borderColor: chartsData.chartsForEuro.dataset1.borderColorChart1, // Add custom color border (Line)
-                backgroundColor: chartsData.chartsForEuro.dataset1.backgroundColorChart1, // Add custom color background (Points and Fill)
-                borderWidth: 2 // Specify bar border width
+                borderColor: chartsData.chartsForEuro.dataset1.borderColorChart1,
+                backgroundColor: chartsData.chartsForEuro.dataset1.backgroundColorChart1,
+                borderWidth: 1
             },
             {
-                label: chartsData.chartsForEuro.dataset2.labelChart2, // Name the series
-                data: chartsData.chartsForEuro.dataset2.dataChart2, // Specify the data values array
+                label: chartsData.chartsForEuro.dataset2.labelChart2,
+                data: chartsData.chartsForEuro.dataset2.dataChart2,
                 fill: false,
-                borderColor: chartsData.chartsForEuro.dataset2.borderColorChart2, // Add custom color border (Line)
-                backgroundColor: chartsData.chartsForEuro.dataset2.backgroundColorChart2, // Add custom color background (Points and Fill)
-                borderWidth: 1 // Specify bar border width
-            }, {
-                label: chartsData.chartsForEuro.dataset3.labelChart3, // Name the series
-                data: chartsData.chartsForEuro.dataset3.dataChart3, // Specify the data values array
+                borderColor: chartsData.chartsForEuro.dataset2.borderColorChart2,
+                backgroundColor: chartsData.chartsForEuro.dataset2.backgroundColorChart2,
+                borderWidth: 1
+            },
+            {
+                label: chartsData.chartsForEuro.dataset3.labelChart3,
+                data: chartsData.chartsForEuro.dataset3.dataChart3,
                 fill: false,
-                borderColor: chartsData.chartsForEuro.dataset3.borderColorChart3, // Add custom color border (Line)
-                backgroundColor: chartsData.chartsForEuro.dataset3.backgroundColorChart3, // Add custom color background (Points and Fill)
-                borderWidth: 1 // Specify bar border width
+                borderColor: chartsData.chartsForEuro.dataset3.borderColorChart3,
+                backgroundColor: chartsData.chartsForEuro.dataset3.backgroundColorChart3,
+                borderWidth: 1
             }
         ]
     },
     options: {
-        responsive: true, // Instruct chart js to respond nicely.
-        maintainAspectRatio: false, // Add to prevent default behaviour of full-width/height 
+        responsive: true, // Instruct chart js to respond nicely
+        maintainAspectRatio: false, // Add to prevent default behaviour of full-width/height
     }
-});
+}
+
+let myChart = new Chart(canvasElement, config);
 
 
 
