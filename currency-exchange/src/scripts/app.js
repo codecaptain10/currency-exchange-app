@@ -55,6 +55,13 @@ JS Scripts
 11) Uruchomienie i testowy użytek
 
 */
+//Import CSS
+import '../styles/style.css'
+import '../styles/exchange-calculator.css'
+import '../styles/contact-info.css'
+import '../styles/currency-charts.css'
+
+
 //Import - exchange
 import * as ExchangeCalculator from '../modules/exchange/exchangeCalculator.js'
 import * as ActualCourseBanner from '../modules/exchange/actualCourseBanner.js'
