@@ -61,6 +61,12 @@ import '../styles/exchange-calculator.css'
 import '../styles/contact-info.css'
 import '../styles/currency-charts.css'
 
+//Import IMG
+import homepage from '../img/homepage.jpg'
+import currencyCalculator from '../img/currency-calculator.jpg'
+import currencyCharts from '../img/currency-charts.jpg'
+import contact from '../img/contact.jpg'
+
 
 //Import - exchange
 import * as ExchangeCalculator from '../modules/exchange/exchangeCalculator.js'
